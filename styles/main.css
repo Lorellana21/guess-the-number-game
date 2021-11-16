@@ -24,11 +24,11 @@ body {
 }
 
 .backgroundCity {
-  background: url("/images/ciudad.jpg");
+  background-image: url("https://fondosmil.com/fondo/70849.jpg");
 }
 
 .backgroundCountryside {
-  background: url("/images/pueblo.jpg");
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/623/232/3/beautiful-village-wallpaper-preview.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
