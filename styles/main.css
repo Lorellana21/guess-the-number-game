@@ -24,11 +24,11 @@ body {
 }
 
 .backgroundCity {
-  background-image: url("/images/ciudad.jpg");
+  background: url("/images/ciudad.jpg");
 }
 
 .backgroundCountryside {
-  background-image: url("/images/pueblo.jpg");
+  background: url("/images/pueblo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
