@@ -1,43 +1,49 @@
 'use strict';
 
-const mainElement = document.querySelector ('.js-page');
-const titleElement = document.querySelector ('.js-title');
-const selectElement = document.querySelector ('.js-select');
-const buttonElement = document.querySelector ('.js-button');
+"use strict";
 
+const numberInput = document.querySelector(".js-numberInput");
+const testButton = document.querySelector(".js-testButton");
+const message = document.querySelector(".js-message");
+const attempts = document.querySelector(".js-attemptsNumber");
+const resetButton = document.querySelector ('.js-reset');
 
-function refreshTitle(){
-const selectedItem = selectElement.value;
-titleElement.innerHTML = selectedItem;
+function getRandomNumber(max) {
+  return Math.ceil(Math.random() * max);
 }
 
-function getRandomInt(){
-    const number =  Math.floor(Math.random() * 100);
-    return number;
+function showMessage() {
+  const numberIntroduced = parseInt(numberInput.value);
+
+  if (numberIntroduced < 1 || numberIntroduced > 100) {
+    message.innerHTML = "The number must be between 1 and 100";
+  } else if (numberIntroduced > randomNumber) {
+    message.innerHTML = "The number is too high";
+  } else if (numberIntroduced < randomNumber) {
+    message.innerHTML = "The number is too low";
+  } else if (numberIntroduced === randomNumber) {
+    message.innerHTML = "You have won!";
   }
-  
-
-const removeBackgroundClass = () => {
-mainElement.classList.remove("backgroundCity", "backgroundCountryside");
 }
 
-function setNewBackground(randomNumber){
-    if(randomNumber % 2 === 0){
-        mainElement.classList.add("backgroundCity");
-    } else { 
-        mainElement.classList.add("backgroundCountryside");
-    }
+let count = 0;
+function showAttempts() {
+  count++;
+  attempts.innerHTML = `Number of attempts: ${count}`;
 }
 
-function refreshBackground(){
-    const number = getRandomInt();
-    removeBackgroundClass();
-    setNewBackground(number);
-
+function handleClickButton(event) {
+  event.preventDefault();
+  showMessage();
+  showAttempts();
 }
 
-function handlerClickButton(){
-    refreshTitle();
-    refreshBackground();
+function handleResetButton(){
+    message.innerHTML = "Type a number and click Test";
+    attempts.innerHTML = "Number of attempts: 0";
 }
-buttonElement.addEventListener("click", handlerClickButton);
+
+testButton.addEventListener("click", handleClickButton);
+resetButton.addEventListener("click", handleResetButton)
+const randomNumber = getRandomNumber(100);
+console.log(randomNumber);

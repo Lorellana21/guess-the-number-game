@@ -6,20 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
-    <title>City or countryside</title>
+    <title>Guess the number</title>
 </head>
 
-<body>
-    <main class="main js-page backgroundCountryside">
-        <h1 class="title js-title">City</h1>
-        <form class="controls" action="">
-            <select class="controls__options js-select" name="option__selected" id="">
-                <option value="City">City</option>
-                <option value="Countryside">Countryside</option>
-            </select>
-            <input class="controls__button js-button" type="button" value="Update">
-        </form>
-    </main>
+<body class="body">
+    <h1 class="title">Guess the number</h1>
+
+    <form class="form js-form">
+        <label for="" class="subtitle">Enter the number here:</label>
+        <input class="number js-numberInput" type="number" name="tryNumber" min="1" max="100" />
+
+        <input class="testButton js-testButton" type="submit" value="Test" />
+        <input class="reset js-reset" type="reset" value="Reset">
+        <p class="message js-message">Type a number and click Test</p>
+        <p class="attemptsNumber js-attemptsNumber">Number of attempts: 0</p>
+    </form>
 
     <script src="./js/main.js"></script>
 </body>
