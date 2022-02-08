@@ -1,12 +1,13 @@
 .body{
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://p4.wallpaperbetter.com/wallpaper/634/64/941/casino-dice-roulette-wallpaper-preview.jpg");
-  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-height: 100vh;
   background-size: cover;
-  font-size: 16px;
+  background-position: top;
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/634/64/941/casino-dice-roulette-wallpaper-preview.jpg");
+  
 }
 
 .title {
@@ -15,10 +16,9 @@
   margin-left: 20px;
   margin-top: -5px;
 }
-.subtitle{
-  font-size: 2rem;
-  color: white;
-  margin-left: 10px;
+::placeholder {
+  font-size: 0.5em;
+  
 }
 .form{
   height: 50%;
@@ -44,7 +44,8 @@
   outline: none;
    background-color: transparent;
    border-radius: 5px;
-   color: red;
+   box-shadow: 0px 0px 11px 12px #04921c7a;
+   color: white;
    cursor: pointer;
 }
 .message, .attemptsNumber{
