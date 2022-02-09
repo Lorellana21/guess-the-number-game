@@ -2,22 +2,26 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   min-height: 100vh;
   background-size: cover;
   background-position: top;
   background-image: url("https://p4.wallpaperbetter.com/wallpaper/634/64/941/casino-dice-roulette-wallpaper-preview.jpg");
+  backdrop-filter: blur(5px);
   
 }
 
 .title {
   font-size: 5rem;
   color: white;
-  margin-left: 20px;
+  width: 5rem;
   margin-top: -5px;
+  margin-left: 20px;
 }
 ::placeholder {
   font-size: 0.5em;
+  padding: 1rem;
   
 }
 .form{
@@ -34,7 +38,7 @@
   background: #08ce22; 
   color: red;
   font-weight: bold; 
-  padding: 10px;
+  padding: 5px;
   border: 2px solid #bdfae6; 
   border-radius: 10px
 }
